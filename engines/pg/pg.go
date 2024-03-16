@@ -139,6 +139,10 @@ func (pg *PG) ReleaseTask(ctx context.Context, task *stepper.Task) error {
 	return nil
 }
 
+func (pg *PG) UpdateTask(ctx context.Context, name string, updatedLaunchAt time.Time) error {
+	return fmt.Errorf("not implemented")
+}
+
 func (pg *PG) WaitTaskForSubtasks(ctx context.Context, task *stepper.Task) error {
 	return pg.runTX(task.EngineContext, func(tx pgx.Tx) error {
 		_, err := tx.Exec(

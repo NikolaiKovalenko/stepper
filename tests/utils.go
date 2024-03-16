@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/matroskin13/stepper"
+	"github.com/NikolaiKovalenko/stepper"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -7,14 +7,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/matroskin13/stepper"
-	"github.com/matroskin13/stepper/examples"
-	"github.com/matroskin13/stepper/middlewares"
+	"github.com/NikolaiKovalenko/stepper"
+	"github.com/NikolaiKovalenko/stepper/examples"
+	"github.com/NikolaiKovalenko/stepper/middlewares"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	mongoEngine "github.com/matroskin13/stepper/engines/mongo"
+	mongoEngine "github.com/NikolaiKovalenko/stepper/engines/mongo"
 )
 
 func main() {

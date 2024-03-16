@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/matroskin13/stepper"
+	"github.com/NikolaiKovalenko/stepper"
 )
 
 type RetryOptions struct {

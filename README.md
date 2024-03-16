@@ -10,17 +10,17 @@ A simple, efficient, concurrent task runner.
 ## Install
 
 ```bash
-go get github.com/matroskin13/stepper
+go get github.com/NikolaiKovalenko/stepper
 ```
 
 ```bash
-go get github.com/matroskin13/stepper/engines/mongo
+go get github.com/NikolaiKovalenko/stepper/engines/mongo
 ```
 
 or
 
 ```bash
-go get github.com/matroskin13/stepper/engines/pg
+go get github.com/NikolaiKovalenko/stepper/engines/pg
 ```
 
 ## Getting started
@@ -31,8 +31,8 @@ package main
 import (
     "log"
 
-    "github.com/matroskin13/stepper"
-    "github.com/matroskin13/stepper/engines/mongo"
+    "github.com/NikolaiKovalenko/stepper"
+    "github.com/NikolaiKovalenko/stepper/engines/mongo"
 )
 
 func main() {
@@ -65,7 +65,7 @@ func main() {
 Or you can use PostgresQL:
 
 ```go
-import "github.com/matroskin13/stepper/engines/pg"
+import "github.com/NikolaiKovalenko/stepper/engines/pg"
 ```
 
 ```go

@@ -6,9 +6,9 @@ import (
 	"log"
 	"strings"
 
-	"github.com/matroskin13/stepper"
-	mongoEngine "github.com/matroskin13/stepper/engines/mongo"
-	"github.com/matroskin13/stepper/examples"
+	"github.com/NikolaiKovalenko/stepper"
+	mongoEngine "github.com/NikolaiKovalenko/stepper/engines/mongo"
+	"github.com/NikolaiKovalenko/stepper/examples"
 )
 
 func main() {

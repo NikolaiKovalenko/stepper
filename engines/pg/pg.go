@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/NikolaiKovalenko/stepper"
 	"github.com/georgysavva/scany/v2/pgxscan"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/matroskin13/stepper"
 
 	sq "github.com/Masterminds/squirrel"
 )

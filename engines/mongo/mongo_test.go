@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/matroskin13/stepper"
-	"github.com/matroskin13/stepper/tests"
+	"github.com/NikolaiKovalenko/stepper"
+	"github.com/NikolaiKovalenko/stepper/tests"
 	"go.mongodb.org/mongo-driver/event"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

@@ -3,7 +3,7 @@ package middlewares
 import (
 	"time"
 
-	"github.com/matroskin13/stepper"
+	"github.com/NikolaiKovalenko/stepper"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/samber/lo"
 )

@@ -3,7 +3,7 @@ package middlewares
 import (
 	"fmt"
 
-	"github.com/matroskin13/stepper"
+	"github.com/NikolaiKovalenko/stepper"
 )
 
 func LogMiddleware() stepper.MiddlewareHandler {

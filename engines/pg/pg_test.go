@@ -5,8 +5,8 @@ import (
 	"log"
 	"testing"
 
-	"github.com/matroskin13/stepper"
-	"github.com/matroskin13/stepper/tests"
+	"github.com/NikolaiKovalenko/stepper"
+	"github.com/NikolaiKovalenko/stepper/tests"
 )
 
 func TestPG(t *testing.T) {

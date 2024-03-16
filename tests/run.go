@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/matroskin13/stepper"
+	"github.com/NikolaiKovalenko/stepper"
 	"github.com/rs/xid"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"

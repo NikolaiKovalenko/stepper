@@ -62,6 +62,32 @@ func (m *Mongo) CreateTask(ctx context.Context, task *stepper.Task) error {
 	return err
 }
 
+func (m *Mongo) UpdateTask(ctx context.Context, name string, updatedLaunchAt time.Time) error {
+	upsert := true
+	after := options.After
+	o := options.FindOneAndUpdateOptions{
+		Upsert:         &upsert,
+		ReturnDocument: &after,
+	}
+
+	filter := bson.D{
+		{"name", name},
+		{"status", "created"},
+	}
+
+	update := bson.M{
+		"$set": bson.M{
+			"launchAt": updatedLaunchAt,
+		},
+	}
+	res := m.tasks.FindOneAndUpdate(ctx, filter, update, &o)
+	tsk := Task{}
+	if err := res.Decode(&tsk); err != nil {
+		return err
+	}
+	return res.Err()
+}
+
 func (m *Mongo) SetState(ctx context.Context, task *stepper.Task, state []byte) error {
 	query := bson.M{"id": task.ID}
 	update := bson.M{"$set": bson.M{"state": state}}

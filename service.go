@@ -129,6 +129,10 @@ func (s *Service) Publish(ctx context.Context, name string, data []byte, options
 	return s.createTask(ctx, created)
 }
 
+func (s *Service) UpdateTask(ctx context.Context, name string, updatedLaunchAt time.Time) error {
+	return s.mongo.UpdateTask(ctx, name, updatedLaunchAt)
+}
+
 func (s *Service) Listen(ctx context.Context) error {
 	if err := s.jobEngine.Init(ctx); err != nil {
 		return err

@@ -17,6 +17,7 @@ type TaskEngine interface {
 	WaitTaskForSubtasks(ctx context.Context, task *Task) error
 	FailTask(ctx context.Context, task *Task, err error, timeout time.Duration) error
 	CreateTask(ctx context.Context, task *Task) error
+	UpdateTask(ctx context.Context, name string, updatedLaunchAt time.Time) error
 	GetUnreleasedTaskChildren(ctx context.Context, task *Task) (*Task, error)
 	SetState(ctx context.Context, task *Task, state []byte) error
 	CollectMetrics(ctx context.Context) error

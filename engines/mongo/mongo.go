@@ -88,6 +88,24 @@ func (m *Mongo) UpdateTask(ctx context.Context, name string, updatedLaunchAt tim
 	return res.Err()
 }
 
+func (m *Mongo) FindTask(ctx context.Context, name string) (*stepper.Task, error) {
+	filter := bson.D{
+		{"name", name},
+		{"status", "created"},
+	}
+
+	res := m.tasks.FindOne(ctx, filter, options.FindOne())
+	if res.Err() != nil {
+		return nil, res.Err()
+	}
+	tsk := Task{}
+	if err := res.Decode(&tsk); err != nil {
+		return nil, err
+	}
+
+	return tsk.ToModel(), nil
+}
+
 func (m *Mongo) SetState(ctx context.Context, task *stepper.Task, state []byte) error {
 	query := bson.M{"id": task.ID}
 	update := bson.M{"$set": bson.M{"state": state}}
